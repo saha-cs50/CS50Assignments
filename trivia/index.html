@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function(){
+                //mcq correct answer
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#text1').innerHTML = 'Correct!';
+                });
+                //mcq incorrect answers
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                    incorrects[i].style.backgroundColor = 'red';
+                    document.querySelector('#text1').innerHTML = 'Incorrect!';
+
+                });
+                }
+                //free response correct answer
+                document.querySelector('#answer').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if(input.value === 'July 7'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#text2').innerHTML = 'Correct!';
+                    }
+                    //free response incorrect answer
+                    else{
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#text2').innerHTML = 'Incorrect!';
+                    }
+
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which country consumes the most chocolate per capita?</h3>
+
+                <button type ="button" class = "incorrect">Belgium</button>
+                <button type ="button" class = "incorrect">Germany</button>
+                <button type ="button" class = "correct">Switzerland</button>
+                <button type ="button" class = "incorrect">Bolivia</button>
+                <button type ="button" class = "incorrect">USA</button>
+
+                <p id="text1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What date is World Chocolate Day celebrated?</h3>
+
+                    <input type = "text">
+                    <button id = "answer">Check Answer </button>
+
+                    <p id="text2"></p>
+
+            </div>
+        </div>
+    </body>
+</html>
