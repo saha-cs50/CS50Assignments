@@ -1,0 +1,33 @@
+.align {
+    padding: 200px 510px;
+
+
+}
+
+.bgmain {
+    background-image: url('please last one.jpg');
+    background-size: cover;
+}
+
+h1{
+    font-size: 75px;
+    font-family: 'Playfair Display';
+    color: 	#5C4033;
+}
+h3{
+    font-family: 'Playfair Display';
+    color: 	#5C4033;
+}
+h5{
+    font-family: 'Playfair Display';
+    color: 	#5C4033;
+}
+
+a{
+    color: #5C4033;
+}
+
+.bg
+{
+    background-color: #A3795B
+}

@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: on comparing the times taken to sort out a reversed list and sorted list, there is large difference in time. Both merge sort and select sort do not have a large difference in time for their big O and omega O notation, meaning this is bubble sort.
+
+sort2 uses: merge sort
+
+How do you know?: takes the least amount of time to sort a large random list, as well as has almost no difference in time of sorting a reversed and sorted list, but takes much less time both ways than sort3
+
+sort3 uses: selection sort
+
+How do you know?: takes the same amount of time to sort a reversed and sorted list, but takes a significantly larger amount of time both ways than sort2
